@@ -1,0 +1,98 @@
+\documentclass[oneside]{Tptesi}
+%\usepackage[italian]{babel}
+\usepackage[T1]{fontenc} % Usa la nuova codifica standard dei caratteri in LaTeX
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{epstopdf}
+\usepackage[italian]{varioref}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs} 
+\usepackage{multirow}
+\usepackage{url}
+%\usepackage{algorithm2e}
+\usepackage{float}
+\hypersetup{urlcolor=black}
+				
+% ------------------------------------------------------------------------------
+% Metadata (Change this)
+% ------------------------------------------------------------------------------
+	\title{Information in agent-based competitive models with limited resources}
+	\author{Sandro Mehic}
+	\titolocorso{Ingegneria Informatica}
+	\chair{Prof. Franco Bagnoli}
+	\numberofmembers{2} %numero dei relatori
+	\othermembers{Prof. Michele Basso}
+%	\numerocorrelatori{0} %numero dei correlatori
+%	\correlatori{Dott. Daniele Baracchi}
+	\degreeyear{2014/2015}
+	\dataTesi{3 Luglio 2015}
+
+
+
+% ---- Inclusioni separate da virgole e senza spazi  --------------
+%\includeonly 
+%{abstract, introduzione, bibliografia}
+%
+%%//// document ///////////////////////////////////////////////////////////////
+
+\begin{document}
+\hyphenation{}
+%
+%
+\maketitle % crea il frontespizio(ricordati di copiare "stemma.eps" nella tuadirectory)%
+
+\thispagestyle{empty}
+\begin{flushright}
+\large\em \vspace*{2cm}
+   Alla mia famiglia\\
+   
+\end{flushright}
+
+%----- Abstract
+\include{abstract}
+% --- Crea la pagina dei ringraziamenti (se ti va) ---
+
+%% --- Fine ringraziamenti ----------------
+%%
+\pagenumbering{arabic}
+\pagestyle{plain}
+\tableofcontents % inserisce indice generale
+\listoffigures   % inserisce indice figure
+\listoftables    % inserisce indice tabelle
+%\listoflistings	 % inserisce indice di codici
+%%
+%%--------------- Inizio del testo vero e proprio
+%%
+
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{headings}
+
+%% ////////////////////////////////////////////////////////////////////////////
+\include{introduction}
+% Minority game model as a competitive model
+\include{chapter1}
+% Neighbourhood influence on the model
+\include{chapter2}
+% Random decision making and learning inside the model
+\include{chapter3}
+% Real world applications of the research results
+\include{chapter4}
+% Conclusions
+\include{conclusions}
+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+\end{document}
