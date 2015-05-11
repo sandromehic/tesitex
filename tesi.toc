@@ -2,13 +2,13 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Competitive systems and finite resources}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Minority Games}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}Algorithmic Trading}{4}{section.1.3}
-\contentsline {section}{\numberline {1.4}Overfitting and Less-is-more}{4}{section.1.4}
-\contentsline {section}{\numberline {1.5}Vicinity Structure}{4}{section.1.5}
-\contentsline {section}{\numberline {1.6}Structure of the thesis}{4}{section.1.6}
-\contentsline {chapter}{\numberline {2}Minority games}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{6}{chapter.3}
-\contentsline {chapter}{\numberline {4}Random decision making and learning inside the model}{7}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{8}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{9}{chapter.6}
-\contentsline {chapter}{Bibliography}{10}{section*.5}
+\contentsline {section}{\numberline {1.3}Algorithmic Trading and High Frequency Trading}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Bounded rationality and Overfitting}{6}{section.1.4}
+\contentsline {section}{\numberline {1.5}Vicinity Structure}{8}{section.1.5}
+\contentsline {section}{\numberline {1.6}Structure of the thesis}{10}{section.1.6}
+\contentsline {chapter}{\numberline {2}Minority games}{11}{chapter.2}
+\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{12}{chapter.3}
+\contentsline {chapter}{\numberline {4}Random decision making and learning inside the model}{13}{chapter.4}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{14}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{15}{chapter.6}
+\contentsline {chapter}{Bibliography}{16}{section*.5}
