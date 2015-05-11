@@ -1,10 +1,76 @@
 \chapter{Introduction}
 
-\cite{challet2013minority}
+During this thesis we have worked on a problem of information importance within competitive systems with limited resources. 
+We have modelled a competitive environment with classic Minority games, introduced in \ref{1:minority}, and by modifying the basic implementation with a vicinity information, while studying it's structure as introduced in \ref{1:vicinity}, we have studied how it affects the efficiency of the model.
+These models can be used to analyse any kind of competitive system that has a well defined resource, such as bandwidth in communication systems, mobility in transports, buy/sell decision-making in finance, and so on.
+The basic idea behind the study of financial markets is introduced in section \ref{1:finance}, while in section \ref{1:overfitting} we introduce a principle that has inspired some assumptions made during the thesis.
 
-\section{Struttura della tesi}
-Quello che ci si è proposti di fare in questo lavoro di tesi è la costruzione di un'architettura che combinasse input visivi ed output derivanti da processi di visione primitiva al fine di ottenere risultati percettivi privi di ambiguità, prendendo spunto dal funzionamento del sistema visivo umano.
-Si è cercato cioè di determinare i fattori più importanti che influiscono nella generazione delle immagini e delle relazioni che intercorrono fra di loro. Una volta acquisite, queste relazioni esse possono essere usate nei processi inversi per ottenere le informazioni che hanno contribuito a creare le immagini.
-In particolare ci siamo occupati del problema dello \textit{shape from shading}, che ha l'obiettivo di ricostruire la struttura 3D di un oggetto a partire dalle sole informazioni di ombreggiatura.
-Descriveremo questa architettura nel capitolo 2, dopodiché procederemo ad illustrare qual'è lo stato dell'arte dello shape from shading nel capitolo 3. 
-Nel capitolo 4 riporteremo il lavoro svolto e i risultati prodotti, concludendo nel capitolo 5 con proposte e sviluppi futuri.
+\section{Competitive systems and finite resources}
+The definition in ecology of a competitive system is the one where one species tries to dominate others while competing for the same resources. 
+In the Gause's law of competitive exclusion or just Gause's law, \cite{gause1936struggle} it is stated that two species competing for the same resource cannot coexist at constant population values, if other ecological factors remain constant. 
+
+This definition can be applied to any human or human-made system where the agents involved act in the self-best interest and are competing for the same resource.
+There will be the losing side that will get excluded in the long run and a winning side whose behaviour will probably be replicated by others.
+
+While in a vast system of nature humans cannot exhibit enough control to prevent the destruction of less efficient species, and one can think that it is not even a wise thing to do, there are other areas where one can intervene.
+Many human and algorithmic systems should be rendered more efficient, rather than bring the exclusion of less able agents.
+If we take the example of human transport system, we can apply some sort of control over the system, whether by tackling modern navigation systems, maps or the physical structure of the transport network, rather than leave the poor performance agents, in this example human drivers, to their own devices.
+	
+
+\section{Minority Games}
+\label{1:minority}
+Minority Games are a model of a competitive system, formulated by Damien Challet and Yi-Cheng Zhang
+in 1997 \cite{challet1997emergence}, based on the El Farol Bar problem. 
+The basic model was proposed by Brian Arthur in 1994 \cite{arthur1994inductive} and it was inspired by the decision making of people in a small community of El Farol. 
+Suppose that there is a cultural event is being held every week in the El Farol Bar. 
+However the locale has finite space, so whether a single person enjoys the evening is determined by the quantity of other people at the bar. 
+A certain limit is defined, $60\%$ in the original paper, and when it is saturated it can be said that people present would rather be satisfied staying at home. 
+Same can be said if the attendance is bellow the determined limit and the person has decided to stay at home, ie. decision to stay at home is considered a losing one.
+
+Minority Games set the limit to $50\%$, so that the losing side is always the majority, while the winning side is the minority.
+This way the model becomes frustrated, meaning that most of the agents can not be satisfied.
+It is also called a negative-sum-game, as with time only the minority can win and be rewarded points, while the majority will have a negative score.
+
+The simplest model consists of $N$ agents, where $N$ is an odd integer, that have to make a decision between two possibilities at each round.
+Each agent has $S$ deterministic strategies from which he can choose.
+At each round the agent invokes all his strategies to make the decision and then chooses the strategy with the highest score.
+After the attendance, representing the majority side, of all the agents has been calculated, every agents awards the strategies that have predicted the winning side by increasing their score, while decreasing the score of the strategies that have failed to guess the correct decision.
+
+The information given to each agent can be external or generated by the model, depending on the goal of the study.
+In classic minority games the information is internal, and it is a string of $M$ past minority decisions, where $M$ is the brain size, or memory, of each agent, for example $'101100'$ if the agents have memory $6$.
+There have been other studies where the information given to agents was generated by some external mechanism, or purely random sequences, and in these papers it has been proven that the source of information does not influence the important characteristics of the model.
+
+The strategies of the agents are based on the assumption that by remembering past outcomes of the game, the strategy can predict the outcome at the next step.
+A strategy is defined as a function $f:2^M\to\{0,1\}$, where $M$ is the memory of the agent, and $\{0,1\}$ is the set of possible decisions.
+A sample strategy can be seen in \ref{table:minorityStrategy}.
+
+\begin{table}
+\centering
+\begin{tabular}{|l|l|l||l|}
+\hline
+0 & 0 & 0 & 1   \\ \hline
+0 & 0 & 1 & 1   \\ \hline
+0 & 1 & 0 & 0   \\ \hline
+0 & 1 & 1 & 1   \\ \hline
+1 & 0 & 0 & 0   \\ \hline
+1 & 0 & 1 & 1   \\ \hline
+1 & 1 & 0 & 0   \\ \hline
+1 & 1 & 1 & 0   \\ \hline
+\end{tabular}
+\caption{Example strategy with brain size 3}
+\label{table:minorityStrategy}
+\end{table}
+
+Minority games have been mainly used to model financial markets, as they offer more insight into how the decisions are formulated compared to other models that offer only the possibility to study the decision progression.
+
+
+\section{Algorithmic Trading}
+\label{1:finance}
+
+\section{Overfitting and Less-is-more}
+\label{1:overfitting}
+
+\section{Vicinity Structure}
+\label{1:vicinity}
+
+\section{Structure of the thesis}
