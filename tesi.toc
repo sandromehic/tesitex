@@ -7,8 +7,13 @@
 \contentsline {section}{\numberline {1.5}Vicinity Structure}{8}{section.1.5}
 \contentsline {section}{\numberline {1.6}Structure of the thesis}{10}{section.1.6}
 \contentsline {chapter}{\numberline {2}Minority games}{11}{chapter.2}
-\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{12}{chapter.3}
-\contentsline {chapter}{\numberline {4}Random decision making and learning inside the model}{13}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{14}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{15}{chapter.6}
-\contentsline {chapter}{Bibliography}{16}{section*.5}
+\contentsline {section}{\numberline {2.1}The Basic Model}{13}{section.2.1}
+\contentsline {section}{\numberline {2.2}Definition of the Model}{14}{section.2.2}
+\contentsline {section}{\numberline {2.3}Major features}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Variations for financial markets}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Model with vicinity}{14}{section.2.5}
+\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{15}{chapter.3}
+\contentsline {chapter}{\numberline {4}Random decision making and learning inside the model}{16}{chapter.4}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{17}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{18}{chapter.6}
+\contentsline {chapter}{Bibliography}{19}{section*.5}
