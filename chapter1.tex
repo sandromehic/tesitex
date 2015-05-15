@@ -53,6 +53,66 @@ This simple mechanism, to buy or sell based on the fact whether other participan
 \section{Definition of the Model}
 \label{minority:definition}
 
+The model is defined as a set of $N$ agents, where $N$ is an odd integer.
+This constrain is used to be able to determine the minority side.
+Population of agents is involved in a series of repeated games where at each round every agent has to make a choice between two actions.
+These to actions can model various resources, as mentioned in \ref{1:competitive}, and in the case of computational representation we have chosen to use "0" and "1".
+Note that in some literature the convention for simulating minority games is to use "-1" and "1" as the opposed actions possible, hence some definitions have to be change to reflect a different choice representation.
+The action that the agent takes at step $t$ is also referenced as \textit{bid} in literature and is denoted by $a_i(t)$, corresponding to the bid of the agent $i$ at time $t$.
+
+Each agent makes his decisions based on a set of strategies that are available. When the game starts agents draw a number of strategies, equal to $S$, from the set of available strategies.
+A strategy is defined as a discrete function, $f:2^M\to\{0,1\}$, where $M$ is the \textit{memory} or the \textit{brain size} of each agent.
+The memory represents how much past information can each agent store and use in order to predict future outcomes.
+An example strategy of brain size $3$ can be seen in \ref{table:minorityStrategy}.
+For a game with memory $M$ the total amount of possible signals is $2^M$, hence the total number of strategies in the strategy pool is $2^{2^M}$.
+
+The history, denoted as $\mu(t)$, is a string of $M$ bits that records the winning actions of the past $M$ steps.
+It is also called the \textit{information} as it can be of external or internal origin, or be a mix of the two.
+So if an agent is using this strategy defined in \ref{table:minorityStrategy} to predict future outcome, and the \textit{information} is $'101'$, it will predict that the next correct action should be $1$.
+Of course, to see whether this action is really the winning action we have to look at the decisions made by all the agents.
+
+The sum of all the agent's decisions is called \textit{attendance}, denoted as $A(t)$ and defined as:
+\begin{displaymath}
+A(t)=\sum_{i=1}^N a_{i,s_i}^{\mu(t)}(t) = \sum_{i=1}^N a_i(t)
+\end{displaymath}
+Where $a_{i,s_i}^{\mu(t)}(t)$ is the decision made by agent $i$ at time $t$ using the best strategy $s_i(t)$ with the information $\mu(t)$.
+
+To define how the best strategy is calculated between $S$ strategies of the agent, we first need to introduce the concept of \textit{cumulated payoff}, referred also as \textit{virtual score }of the strategy. 
+The idea behind the virtual score is to follow the decision making of the strategy through time, whether it is used or not, and confront it to the winning choices.
+If the strategy predict the winning side correctly, even if it is not used, it is rewarded a certain amount known as \textit{payoff} to it's virtual score, hence the name cumulated payoff.
+Viceversa, when the strategy makes an erroneous prediction same amount is detracted from it's cumulated payoff.
+This way agent can see which strategy would have brought him best win ratio over time, and chooses to use it in the next step. 
+If more than one strategy has the maximum virtual score at time $t$, then one of the best strategies is chosen randomly.
+The best strategy is defined as:
+\begin{displaymath}
+s_i(t) = \argmax_s U_{i,s}(t)
+\end{displaymath}
+Where $U_{i,s}(t)$ is the cumulated payoff of strategy $s$ of agent $i$.
+This parameter starts from an arbitrary value, usually zero, and is defined as:
+\begin{displaymath}
+U_{i,s}(t+1) = U_{i,s}(t) -  \sign[( 2 a_{i,s}^{\mu(t)}(t+1) - 1 )(A(t) - \frac{N}{2}  )]
+\end{displaymath}
+Note that the convention we are using for representing actions is "0" and "1" so our attendance is always positive and has to be confronted with $\frac{N}{2}$.
+Same goes for the agents action that should be brought to the "-1" and "1" representation to be able to calculate whether the agent made the winning decision.
+If we were using the $(-1,1)$ convention we could calculate the cumulated payoff at time $t+1$ with
+\begin{displaymath}
+U_{i,s}(t+1) = U_{i,s}(t) -  \sign[a_{i,s}^{\mu(t)}(t+1) A(t) ]
+\end{displaymath}
+
+With the mechanism of choice between different strategies each agent becomes adaptive.
+Of course there is a problem with randomly drawing strategies for it is possible for an agent to draw two very similar strategies and hence cannot use the information to it's fullest as his strategies act in similar fashion.
+
+Being the total number of agents equal to an odd integer, a minority side can be calculated at each step.
+As the number of winner is always smaller than the number of losers the minority game is a \textit{negative-sum-game}.
+Since the two actions are symmetric it can be noted that the average of attendance over time is equal to $\frac{N}{2}$ (or $0$ when $(-1,1)$ convention is used).
+It is therefore more interesting to study other moments of the model, mainly the fluctuation of attendance.
+The variation of attendance is defined as
+\begin{displaymath}
+\sigma^2 = \langle A^2 \rangle - \langle A \rangle^2
+\end{displaymath}
+It is one of the main parameters when studying minority games, and has been proven that the variance of attendance in a model is not influenced by the source of information.
+So whether an exogenous or an endogenous model is simulated the observed properties of the variance remain the same.
+
 \section{Major features}
 \label{miinority:majorfeatures}
 
