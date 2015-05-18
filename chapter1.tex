@@ -256,5 +256,50 @@ If number of agents is large and the number of available strategies is small, it
 \section{Variations for financial markets}
 \label{minority:variations}
 
-\section{Model with vicinity}
-\label{minority:vicinity}
+The basic minority games introduce a very simple model for the financial markets, however there are certain modification to be done before we can start comparing it to a real market.
+Let us assume that the action "1" stands for "buy" and action "0" stands for sell.
+Attendance can now be seen as a number of agents that participate in the market as buyers, while $N-A(t)$ is the number of sellers.
+The quantity $A(t)-\frac{N}{2}$ is the excess demand in the market.
+So if that quantity is positive most of the agents involved are buyers and it is profitable at that moment to sell, and viceversa.
+This is an economical point of view to the basic mechanism of minority games.
+The payoff that is given to agents at each round, introduced in \cite{challet2001stylized}, is defined as
+\begin{displaymath}
+g_i(t) = =a_i(A(t) - \frac{N}{2})
+\end{displaymath}
+This captures the fact that the agent on the minority side are awarded proportionally to their investment.
+
+To model the prices Challet et al. have used this price dynamics in their original paper:
+\begin{displaymath}
+\log p(t+1) = \log p(t) + \frac{A(t)}{\lambda}
+\end{displaymath}
+where $\lambda$ is related to the market depth.
+
+The most important modification of the basic model when trying to simulate financial markets is the introduction of two types of agents, \textit{producers} and \textit{speculators} that interpret different approaches to the real market.
+
+\subsection{Producers}
+
+Producers, per definition, contribute to the market always following a predetermined behaviour.
+They model the agents that produce goods and services, and as such participate in the market at all times.
+Since their scope is not to speculate on other agents behaviour but to use market to sell their goods and buy other goods needed, they have a deterministic behaviour, acting always in the same fashion for same values of $\mu(t)$.
+Inside the model of the market they create information that is then exploited by speculators.
+
+To model producers starting from our basic model is rather simple, only one strategy is given to the agent and no other changes are made.
+Participation is already obligatory in the basic model and having only one strategy makes his deterministic.
+
+\subsection{Speculators}
+
+Speculators on the other hand do not produce goods or services, but use the market to exploit the information injected in the model by the producers to gain profit.
+Two main differences between speculators and producers are the facts that speculators have adaptive behaviour and that they can choose not to participate in the market if they find it unprofitable.
+
+In order to model adaptive behaviour $S$ strategies are given to each speculator, drawn randomly from $2^{2^M}$, from which he can choose.
+As for the ability to abstain from the market in unfavourable conditions we add yet another strategy, called \textit{0-strategy} that tells the speculator not to interact with the market at chosen time.
+
+At each round the speculator chooses the best strategy by picking the one with the highest virtual score, calculated with:
+\begin{displaymath}
+U_{i,s}(t+1) = U_{i,s}(t) - [(2a_{i,s}^{\mu(t)}(t+1)-1)(A(t)-\frac{N}{2}) ] + \epsilon\delta_{s_i(t),0}
+\end{displaymath}
+
+The first part of the formula is the same as the virtual score calculation for the basic model, ie. a strategy is awarded points if it correctly predicts the minority side.
+The second part models the virtual score of the zero strategy that get incremented at every step by $\epsilon$.
+This new parameter models the interest rate for the speculators, making them active participants in the market with only the strategies that can guarantee a profit over time that is larger than $\epsilon t$, with t the number of rounds thus far.
+Note that all the considerations above with the assumption that $\epsilon$ is positive, in fact if we set $\epsilon$ to be infinitely negative speculators act as agents in the basic model.

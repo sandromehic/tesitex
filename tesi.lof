@@ -7,9 +7,8 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Plot of attendance over time for a model with agents with $M=5$ and $N=101$\relax }}{22}{figure.caption.8}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of attendance over time for a model with agents with $M=9$ and $N=101$\relax }}{23}{figure.caption.9}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $4$ on a model where agents have $M=4$\relax }}{24}{figure.caption.10}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $6$ on a model where agents have $M=6$\relax }}{24}{figure.caption.11}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $5$ on a model where agents have $M=3$\relax }}{25}{figure.caption.12}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $6$ on a model where agents have $M=6$\relax }}{25}{figure.caption.11}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $5$ on a model where agents have $M=3$\relax }}{26}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

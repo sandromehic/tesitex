@@ -14,9 +14,9 @@
 \contentsline {subsection}{\numberline {2.3.2}Phase Transition}{18}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Crowds and anti-crowds}{22}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Variations for financial markets}{23}{section.2.4}
-\contentsline {section}{\numberline {2.5}Model with vicinity}{23}{section.2.5}
-\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{26}{chapter.3}
-\contentsline {chapter}{\numberline {4}Random decision making and learning inside the model}{27}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{28}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{29}{chapter.6}
-\contentsline {chapter}{Bibliography}{30}{section*.13}
+\contentsline {subsection}{\numberline {2.4.1}Producers}{25}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Speculators}{26}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}Vicinity and other information in the model}{28}{chapter.3}
+\contentsline {chapter}{\numberline {4}Results and real world applications}{29}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusions}{30}{chapter.5}
+\contentsline {chapter}{Bibliography}{31}{section*.13}
