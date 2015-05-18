@@ -120,7 +120,14 @@ Most important feature of the minority game model  is the characteristic two pha
 \subsection{Standard deviation of attendance}
 \label{subsec:stddev}
 
-
+As the average of the attendance of a basic model tends to $\frac{N}{2}$ as noted in \ref{minority:definition} it is not very useful when studying the model.
+There are two major aspect that can be studied in the model, $M$ and $N$ that respectively represent the memory of the agent and the total number of agents.
+One can choose to study what happens when cognitive abilities of agents change, ie. the quantity of information that can be remembered and processed.
+Let's assume that $N$ is fixed, and that we vary $M$ within certain interval.
+One simple value that we can track is the standard deviation of attendance.
+The graph of standard deviation against brain size is shown in figure \ref{fig:memory to stddev}.
+The data have been generated using basic minority model, with $N=101$ and $M\in[2,12]$.
+We have done in total 32 runs to be able to see the trend in the data.
 
 \begin{figure}
 \begin{center}
@@ -130,16 +137,121 @@ Most important feature of the minority game model  is the characteristic two pha
 \end{center}
 \end{figure}
 
+We can see that there is a minimum of the function somewhere between value $5$ and $6$ for memory.
+Before this point standard deviation is definetly high with respect to the rest of the graph, and after the critical point it seems to converge to some value.
+
+It is already evident that there is certain connection between the memory of agents and their ability to perform efficiently, intended as a efficient distribution of the resource they are competing for.
+In this graph however $N$ is a fixed value, so let us see what happens when we start varying both parameters. 
+
 \subsection{Phase Transition}
 \label{subsec:phasetransition}
+
+After further studies Savit, Manuca and Riolo \cite{savit1999adaptive} have noted that the macroscopic behaviour of the model does not depend independently on the single parameters $M$ and $N$, but rather on the rapport between the two.
+They have discovered that a new control parameter $\alpha$ defined as $\alpha=\frac{2^M}{N}$ defines the volatility of the model.
+Volatility is defined as a normalized variance:
+\begin{displaymath}
+\frac{\sigma^2}{N}
+\end{displaymath}
+The volatility depends only on the ratio between $2^M$ and $N$ and it is no influenced by the source of information, meaning that it maintains it's characteristic behaviour in endogenous and exogenous games.
+
+In figure \ref{fig:normalized variance} volatility is plotted versus the control parameter $\alpha$.
+The red line in the graph represents the volatility of a \textit{random-choice} model.
+If we create a model where all the agents make random decision at every step the volatility that we obtain is:
+\begin{displaymath}
+\frac{\sigma^2}{N} = \frac{Np(1-p)}{N} = 0.5(1-0.5) = 0.25
+\end{displaymath}
+This is calculated assuming a binomial distribution of agent's actions with probability $p=0.5$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/alpha_to_norm_var.pdf}
+\caption{Plot of normalized variance versus control parameter $\alpha$}
+\label{fig:normalized variance}
+\end{center}
+\end{figure}
+
+Looking at the graph \ref{fig:normalized variance} we can see that for low values of our control parameter $\alpha$ agents perform worse than they would if only random decisions where made.
+By incrementing the control parameter, either by raising the memory available or remove certain quantities of agents from the model, the volatility pummels to it's minimum at the critical value of $\alpha$ ($\alpha_c$).
+This critical value has been calculated in \cite{marsili2000exact} by Marsili et al. and is equal to $0.3347...$ for $S=2$.
+By incrementing further the control parameter the volatility starts incrementing again and converges to the random choice limit.
+
+This behaviour can be observed if we look at the plots of attendance for models with different values of $\alpha$. In figures \ref{fig:attendance_m2}, \ref{fig:attendance_m5} and \ref{fig:attendance_m9} graphs of attendance can be seen for models consisting of $101$ agents but with varying memory size. Different brain sizes plotted here are $2$, $5$ and $9$, which gives us $\alpha$ values of $0.03960$, $0.3168316$ and $5.0693069$ respectively. For $\alpha$ bellow it's critical value we can see that the variance of the attendance is rather high, it becomes minimum for $M=5$ and then again as we increase the brain size it start to have a volatile nature.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/attendance_m2_n101.pdf}
+\caption{Plot of attendance over time for a model with agents with $M=2$ and $N=101$}
+\label{fig:attendance_m2}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/attendance_m5_n101.pdf}
+\caption{Plot of attendance over time for a model with agents with $M=5$ and $N=101$}
+\label{fig:attendance_m5}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/attendance_m9_n101.pdf}
+\caption{Plot of attendance over time for a model with agents with $M=9$ and $N=101$}
+\label{fig:attendance_m9}
+\end{center}
+\end{figure}
+
+The $\alpha_c$ identifies a separation between two phases of minority games.
+To characterize better the two phases let's look at the information available to agents in different phases.
+We plot the probability of "1" being the winning choice given a certain history, $P(1|\mu)$ in figures \ref{fig:information_44} and \ref{fig:information_66}.
+When the control parameter is below it's critical value $\alpha_c$ the probability of "1" being the winning side is equal to $0.5$ for all values of history $\mu$.
+This shows the fact that there is no information to be extracted from the model for agents of that particular brain size for all outcomes seem to be random.
+For reasons expressed, this phase is called \textit{unpredictable} phase or also \textit{symmetric} phase for the symmetry present in the histogram of probability given a certain history.
+If we look at the graph of probability given a certain history when the control parameter $\alpha$ is above it's critical value, given in figure \ref{fig:information_66}, we can see that there is information available to be exploited in this phase.
+This phase hence is called \textit{asymmetric} or \textit{predictable}.
+In this phase agents act better than when making random choices, and even though each agent acts in his self best interest we can say that a phenomenon of cooperation emerges as the agents are able to distribute themselves on both sides with rather small variance.
+Note that even in the asymmetric phase model retains it's \textit{negative-sum-game} nature and majority of the agents continue to lose, however the number of losing agents is brought to it's minimum.
+
+
+% probability of 1 given a history
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/information_probability_m4_a4.pdf}
+\caption{Plot of $P(1|\mu)$ versus $\mu$ using a sliding window of length $4$ on a model where agents have $M=4$}
+\label{fig:information_44}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/information_probability_m6_a6.pdf}
+\caption{Plot of $P(1|\mu)$ versus $\mu$ using a sliding window of length $6$ on a model where agents have $M=6$}
+\label{fig:information_66}
+\end{center}
+\end{figure}
+
+It is important to note that the information is present within the model even in the symmetric phase, but the agents don't have the capabilities to exploit that information.
+In fact, if we introduce an agent with $M$ greater that those of agents already in the \textit{symmetric} phase we can expect that he will be able to exploit his advantage of greater memory.
+The information present in the model for an agent with larger brain size can be seen in figure \ref{fig:information_35} that plots the probability that "1" will be the minority size versus the possible history.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/minority/information_probability_m3_a5.pdf}
+\caption{Plot of $P(1|\mu)$ versus $\mu$ using a sliding window of length $5$ on a model where agents have $M=3$}
+\label{fig:information_35}
+\end{center}
+\end{figure}
 
 \subsection{Crowds and anti-crowds}
 \label{subsec:crowds}
 
+The nature of \textit{symmetric} phase brings about the phenomenon of the formation of crowds and anti-crowds.
+When we find ourselves in the symmetric phase the $\alpha$ is below it's critical level, meaning that $2^M$ is roughly one order of magnitude smaller than $N$.
+The consequence is that the number of available strategies $2^{2^M}$ is low when compared to the number of agents, hence probability of different agents having same strategies is higher than in the \textit{asymmetric} phase.
+Another way to explain the phenomenon is to say that when $M$ is low agents are able to efficiently elaborate the information, however since the information is short many agents will come to same predictions, and behave in the same fashion.
 
-
-
-
+The phenomenon of crowds and anti-crowds thus happens in symmetric phase and when it occurs most of the agents behave in the same way, giving rise to high volatility.
+If number of agents is large and the number of available strategies is small, it is more opportune to make decisions randomly rather than use deterministic strategies.
 
 \section{Variations for financial markets}
 \label{minority:variations}
