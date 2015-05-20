@@ -10,5 +10,8 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $6$ on a model where agents have $M=6$\relax }}{25}{figure.caption.11}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $5$ on a model where agents have $M=3$\relax }}{26}{figure.caption.12}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of 15 agents divided in 5 communities, consisting of 3 agents each\relax }}{31}{figure.caption.14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of communities created using sliding window on one-dimensional array for agents 4 and 5 where each community consists of 5 agents\relax }}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Pictures of animals\relax }}{33}{figure.caption.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
