@@ -16,16 +16,17 @@
 \contentsline {section}{\numberline {2.4}Variations for financial markets}{23}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Producers}{25}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Speculators}{26}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Topology of the model and vicinity information}{28}{chapter.3}
-\contentsline {section}{\numberline {3.1}Model modifications to include local information}{29}{section.3.1}
-\contentsline {section}{\numberline {3.2}Fixed one-dimensional communities}{31}{section.3.2}
-\contentsline {section}{\numberline {3.3}Sliding window communities}{32}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{32}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Sliding window on matrix}{33}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Von Neumann Vicinity}{34}{section.3.4}
-\contentsline {section}{\numberline {3.5}Scale free network vicinities}{34}{section.3.5}
-\contentsline {section}{\numberline {3.6}Small world network vicinities}{34}{section.3.6}
-\contentsline {section}{\numberline {3.7}Custom vicinity structure}{34}{section.3.7}
-\contentsline {chapter}{\numberline {4}Results and real world applications}{35}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusions}{36}{chapter.5}
-\contentsline {chapter}{Bibliography}{37}{section*.17}
+\contentsline {subsection}{\numberline {2.4.3}Market ecology and crash simulation}{27}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Topology of the model and vicinity information}{30}{chapter.3}
+\contentsline {section}{\numberline {3.1}Model modifications to include local information}{31}{section.3.1}
+\contentsline {section}{\numberline {3.2}Fixed one-dimensional communities}{33}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sliding window communities}{34}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{34}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Sliding window on a matrix}{35}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Von Neumann Vicinity}{36}{section.3.4}
+\contentsline {section}{\numberline {3.5}Scale free network vicinities}{36}{section.3.5}
+\contentsline {section}{\numberline {3.6}Small world network vicinities}{36}{section.3.6}
+\contentsline {section}{\numberline {3.7}Custom vicinity structure}{36}{section.3.7}
+\contentsline {chapter}{\numberline {4}Results and real world applications}{37}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusions}{38}{chapter.5}
+\contentsline {chapter}{Bibliography}{39}{section*.19}

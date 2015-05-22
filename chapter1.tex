@@ -303,3 +303,36 @@ The first part of the formula is the same as the virtual score calculation for t
 The second part models the virtual score of the zero strategy that get incremented at every step by $\epsilon$.
 This new parameter models the interest rate for the speculators, making them active participants in the market with only the strategies that can guarantee a profit over time that is larger than $\epsilon t$, with t the number of rounds thus far.
 Note that all the considerations above with the assumption that $\epsilon$ is positive, in fact if we set $\epsilon$ to be infinitely negative speculators act as agents in the basic model.
+
+\subsection{Market ecology and crash simulation}
+
+To simulate markets a minority game is defined with a certain number of producer and speculator agents.
+The market is characterized by the rapport between these two quantities.
+As producers behave in a deterministic fashion we can say that they introduce certain information inside the model that can be used by speculators.
+Speculators on the other hand participate when they have a strategy that can consistently outperform the  producers, ie. if the virtual score of the strategy is larger than $\epsilon t$, where $t$ is the time and $\epsilon$ models the interest rate.
+
+If the number of producers is sufficiently high and greater than the number of speculators, than a majority of speculators will be always active as the information introduced by producers is high as well as the possibility to have a strategy that can use that information.
+On the other hand when the number of speculators is higher than the number of producers, a majority of speculators will not participate in the market.
+
+The dynamic when a great quantity of speculators is present when compared to producers causes fluctuations in the market.
+In the beginning the speculators participate in the market, but after certain period $t_1$ the zero-strategy starts to have higher virtual score than the rest of strategies, causing speculators to abstain.
+After $t_1$ then the majority of agents involved are producers that introduce information in the model, so after a second interval at time $t_2$ certain number of speculators start acting inside the market again and reduce the information available.
+
+This behaviour of speculators causes the price to fluctuate and can cause crashes and spikes inside the market.
+An example is shown in figure \ref{fig:active speculators}, where in \ref{fig:active speculators}.(a) we can see the number of active speculators and in \ref{fig:active speculators}.(b) the market price generated with the mechanism described in \ref{minority:variations},
+We can see that the sudden participation of a great number of speculators in the model can cause crashes. 
+
+\begin{figure}[h]
+\begin{center}
+	\begin{subfigure}[b]{0.5\textwidth}
+	\includegraphics[scale=0.4]{images/minority/active_speculators_np10_ns300.pdf}
+	\caption{Number of active speculators in a game with 10 producers and 300 speculators}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+	\includegraphics[scale=0.4]{images/minority/market_price_np10_ns300.pdf}
+	\caption{Market price for the same game in the same interval}
+	\end{subfigure}
+\caption{Active speculators and market price}
+\label{fig:active speculators}
+\end{center}
+\end{figure}

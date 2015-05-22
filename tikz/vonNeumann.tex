@@ -5,12 +5,14 @@
 \begin{tikzpicture}[scale=0.6]
 \foreach \y in {0,...,4}
 	\foreach \x in {0,...,4} {
-		\ifthenelse{\x>0 \AND \x<4 \AND \y>0 \AND \y<4}{\def\mycol{orange}}{\def\mycol{white}}
+		\ifthenelse{\x=2 \AND \y>0 \AND \y<4}{\def\mycol{orange}}{\def\mycol{white}}
 		\ifthenelse{\x=2 \AND \y=2}{\def\mycol{red}}{}
+		\ifthenelse{\x=1 \AND \y=2}{\def\mycol{orange}}{}
+		\ifthenelse{\x=3 \AND \y=2}{\def\mycol{orange}}{}
 		\draw [fill=\mycol](\x, \y) rectangle (\x+1,\y+1);
 	}
 \end{tikzpicture}
-                \caption{Moore vicinity of radius 1}
+                \caption{Radius 1}
                 \label{fig:gull}
         \end{subfigure}
         \begin{subfigure}[b]{0.5\textwidth}
@@ -18,14 +20,18 @@
 \begin{tikzpicture}[scale=0.6]
 \foreach \y in {0,...,6}
 	\foreach \x in {0,...,6} {
-		\ifthenelse{\x>0 \AND \x<6 \AND \y>0 \AND \y<6}{\def\mycol{orange}}{\def\mycol{white}}
+		\ifthenelse{\x>1 \AND \x<5 \AND \y>1 \AND \y<5}{\def\mycol{orange}}{\def\mycol{white}}
 		\ifthenelse{\x=3 \AND \y=3}{\def\mycol{red}}{}
+		\ifthenelse{\x=1 \AND \y=3}{\def\mycol{orange}}{}
+		\ifthenelse{\x=3 \AND \y=1}{\def\mycol{orange}}{}
+		\ifthenelse{\x=3 \AND \y=5}{\def\mycol{orange}}{}
+		\ifthenelse{\x=5 \AND \y=3}{\def\mycol{orange}}{}
 		\draw [fill=\mycol](\x, \y) rectangle (\x+1,\y+1);
 	}
 \end{tikzpicture}
-                \caption{Moore vicinity of radius 2}
+                \caption{Radius 2}
                 \label{fig:tiger}
         \end{subfigure}
 
-        \caption{Vicinity calculated with Chebyshev distance, called Moore neighbourhood}\label{fig:moore}
+        \caption{von Neumann vicinity with radius 1 and 2}\label{fig:vonNeumann}
 \end{figure}
