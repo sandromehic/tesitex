@@ -21,13 +21,13 @@
 \contentsline {section}{\numberline {3.1}Model modifications to include local information}{31}{section.3.1}
 \contentsline {section}{\numberline {3.2}Fixed one-dimensional communities}{33}{section.3.2}
 \contentsline {section}{\numberline {3.3}Sliding window communities}{34}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{34}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Sliding window on a matrix}{35}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{35}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Sliding window on a matrix}{36}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Von Neumann Vicinity}{36}{section.3.4}
-\contentsline {section}{\numberline {3.5}Scale free network vicinities}{36}{section.3.5}
-\contentsline {section}{\numberline {3.6}Small world network vicinities}{36}{section.3.6}
-\contentsline {section}{\numberline {3.7}Custom vicinity structure}{36}{section.3.7}
-\contentsline {chapter}{\numberline {4}Results of competitive systems with different topologies}{37}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{38}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{39}{chapter.6}
-\contentsline {chapter}{Bibliography}{40}{section*.19}
+\contentsline {section}{\numberline {3.5}Scale free network vicinities}{39}{section.3.5}
+\contentsline {section}{\numberline {3.6}Small world network vicinities}{41}{section.3.6}
+\contentsline {section}{\numberline {3.7}Hierarchical vicinity structure}{43}{section.3.7}
+\contentsline {chapter}{\numberline {4}Results of competitive systems with different topologies}{44}{chapter.4}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{45}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{46}{chapter.6}
+\contentsline {chapter}{Bibliography}{47}{section*.25}

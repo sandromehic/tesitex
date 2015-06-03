@@ -12,9 +12,15 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Active speculators and market price\relax }}{29}{figure.caption.13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Example of 15 agents divided in 5 communities, consisting of 3 agents each\relax }}{33}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Example of communities created using sliding window on one-dimensional array for agents 4 and 5 where each community consists of 5 agents\relax }}{34}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Vicinity calculated with Chebyshev distance, called Moore neighbourhood\relax }}{35}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces von Neumann vicinity with radius 1 and 2\relax }}{36}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 21 fixed one-dimensional communities\relax }}{34}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of communities created using sliding window on one-dimensional array for agents 4 and 5 where each community consists of 5 agents\relax }}{35}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 sliding window one-dimensional communities\relax }}{35}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Vicinity calculated with Chebyshev distance, called Moore neighbourhood\relax }}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces von Neumann vicinity with radius 1 and 2\relax }}{37}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 von Neumann two-dimensional communities with $R=2$\relax }}{38}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Scale free graph and the adjacency matrix of a set of 101 agents\relax }}{40}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Small world graph and the adjacency matrix with $N=101$, $K=5$ and $\beta =0.75$\relax }}{42}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Small world graph adjacency matrix with $N=101$, $K=5$ and $\beta = 0.25$\relax }}{43}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
