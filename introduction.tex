@@ -1,9 +1,9 @@
 \chapter{Introduction}
 
 During this thesis we have worked on a problem of information importance within competitive systems with limited resources. 
-We have modelled a competitive environment with classic Minority games, introduced in \ref{1:minority}, and by modifying the basic implementation with a vicinity information, while studying it's structure as introduced in \ref{1:vicinity}, we have studied how it affects the efficiency of the model.
+We have modelled a competitive environment with classic minority games, introduced in Section \ref{1:minority}, and by modifying the basic implementation with a vicinity information, while studying it's structure as introduced in Section \ref{1:vicinity}, we have studied how it affects the efficiency of the model.
 These models can be used to analyse any kind of competitive system that has a well defined resource, such as bandwidth in communication systems, mobility in transports, buy/sell decision-making in finance, and so on.
-The basic idea behind the study of financial markets is introduced in section \ref{1:finance}, while in section \ref{1:overfitting} we introduce a principle that has inspired some assumptions made during the thesis.
+The basic idea behind the study of financial markets is introduced in Section \ref{1:finance}, while in Section \ref{1:overfitting} we introduce a principle that has inspired some assumptions made during the thesis.
 
 \section{Competitive systems and finite resources}
 \label{1:competitive}
@@ -13,8 +13,8 @@ In the Gause's law of competitive exclusion or just Gause's law, \cite{gause1936
 This definition can be applied to any human or human-made system where the agents involved act in the self-best interest and are competing for the same resource.
 There will be the losing side that will get excluded in the long run and a winning side whose behaviour will probably be replicated by others.
 
-While in a vast system of nature humans cannot exhibit enough control to prevent the destruction of less efficient species, and one can think that it is not even a wise thing to do, there are other areas where one can intervene.
-Many human and algorithmic systems should be rendered more efficient, rather than bring the exclusion of less able agents.
+In many natural systems humans cannot exhibit enough control to prevent the destruction of less efficient species, and one can think that it is not even a wise thing to do, however there are other areas where one can intervene.
+Many human and algorithmic systems should be rendered more efficient, rather than wait for the exclusion of less able agents.
 If we take the example of human transport system, we can apply some sort of control over the system, whether by tackling modern navigation systems, maps or the physical structure of the transport network, rather than leave the poor performance agents, in this example human drivers, to their own devices.
 	
 
@@ -23,27 +23,27 @@ If we take the example of human transport system, we can apply some sort of cont
 Minority Games are a model of a competitive system, formulated by Damien Challet and Yi-Cheng Zhang
 in 1997 \cite{challet1997emergence}, based on the El Farol Bar problem. 
 The basic model was proposed by Brian Arthur in 1994 \cite{arthur1994inductive} and it was inspired by the decision making of people in a small community of El Farol. 
-Suppose that there is a cultural event is being held every week in the El Farol Bar. 
-However the locale has finite space, so whether a single person enjoys the evening is determined by the quantity of other people at the bar. 
+Suppose that there is a cultural event being held every week in the El Farol Bar. 
+The bar has finite space, so whether a single person enjoys the evening is determined by the quantity of other people at the bar. 
 A certain limit is defined, $60\%$ in the original paper, and when it is saturated it can be said that people present would rather be satisfied staying at home. 
 Same can be said if the attendance is bellow the determined limit and the person has decided to stay at home, ie. decision to stay at home is considered a losing one.
 
-Minority Games set the limit to $50\%$, so that the losing side is always the majority, while the winning side is the minority.
-This way the model becomes frustrated, meaning that most of the agents can not be satisfied.
+Minority games set the limit to $50\%$, so that the losing side is always the majority, while the winning side is the minority.
+In this way the model becomes frustrated, meaning that most of the agents can not be satisfied.
 It is also called a negative-sum-game, as with time only the minority can win and be rewarded points, while the majority will have a negative score.
 
 The simplest model consists of $N$ agents, where $N$ is an odd integer, that have to make a decision between two possibilities at each round.
 Each agent has $S$ deterministic strategies from which he can choose.
-At each round the agent invokes all his strategies to make the decision and then chooses the strategy with the highest score.
-After the attendance, representing the majority side, of all the agents has been calculated, every agents awards the strategies that have predicted the winning side by increasing their score, while decreasing the score of the strategies that have failed to guess the correct decision.
+At each round every agent follows the strategy with the highest score among the ones in his/hers expertise
+After the evaluation of the majority and minority sides, every agent updates his/hers strategies by increasing the score of those that predicted the winning side, while decreasing the score of those that have failed to guess the correct decision.
 
 The information given to each agent can be external or generated by the model, depending on the goal of the study.
-In classic minority games the information is internal, and it is a string of $M$ past minority decisions, where $M$ is the brain size, or memory, of each agent, for example $'101100'$ if the agents have memory $6$.
+In classic minority games the information is internal, and it is a string of $M$ past minority outcomes, where $M$ is the brain size, or memory, of each agent, for example $'101100'$ if the agents have memory $6$.
 There have been other studies where the information given to agents was generated by some external mechanism, or purely random sequences, and in these papers it has been proven that the source of information does not influence the important characteristics of the model.
 
 The strategies of the agents are based on the assumption that by remembering past outcomes of the game, the strategy can predict the outcome at the next step.
 A strategy is defined as a function $f:2^M\to\{0,1\}$, where $M$ is the memory of the agent, and $\{0,1\}$ is the set of possible decisions.
-A sample strategy can be seen in \ref{table:minorityStrategy}.
+A sample strategy can be seen in Table \ref{table:minorityStrategy}.
 
 \begin{table}
 \centering
@@ -62,14 +62,14 @@ A sample strategy can be seen in \ref{table:minorityStrategy}.
 \label{table:minorityStrategy}
 \end{table}
 
-Minority games have been mainly used to model financial markets, as they offer more insight into how the decisions are formulated compared to other models that offer only the possibility to study the decision progression.
+Minority games have been mainly used to model financial markets, as they offer more insight into how the decisions are formulated compared to other models that offer only the possibility to study the time series of outcomes.
 
 
 \section{Algorithmic Trading and High Frequency Trading}
 \label{1:finance}
 Algorithmic trading and High Frequency trading are two types of capital and stock exchange that usually go together.
 High frequency trading (HFT) is defined as a large quantity of exchanges of capital in small intervals of time.
-The advent of HFT has brought us a market with ever increasing number of trading operations while the values of exchanges goods has decreased in proportion.
+The advent of HFT has brought us a market with ever increasing number of trading operations while the values of exchanged goods has decreased in proportion.
 Because of it's nature as a high speed approach in a response to constantly evolving market conditions, HFT has become dependent of algorithmic trading.
 
 Algorithmic trading (or black-box trading), as defined in \cite{algotrading}, is the process of using computers programmed to follow a defined set of instructions for placing a trade in order to generate profits at a speed and frequency that is impossible for a human trader. 
@@ -78,17 +78,17 @@ Apart from profit opportunities for the trader, algo-trading makes markets more 
 Human decision making has proven to be too slow for modern computers, thus high frequency trading cannot be implemented without algorithmic trading. 
 
 There are two main strategies with which traders, be they human or algorithmic, make profit in the stock exchange. 
-One is called \textit{market making} and it is applied by being an active influence on the trading system, this means trying to create trends by buying or selling certain quantity of stocks and exploit that trend in the future.
+One is called \textit{market making} and it is applied by being an active influence on the trading system, this means trying to create trends by buying or selling certain quantity of stocks and exploiting that trend in the future.
 Second type of strategy is called \textit{statistical arbitrage}.
-Arbitrage is defined as simultaneous purchase and sale of an asset in order to profit from a difference in the price, whether in space (different market) or in time.
-Statistical arbitrage is the use of mathematical models to find arbitrage within existing market and use it to make profit.
+Arbitrage is defined as simultaneous purchase and sale of an asset in order to profit from a difference in the price, whether in space (different markets) or in time.
+Statistical arbitrage makes use of mathematical models to find arbitrage within existing market and use it to make profit.
 
-Main problem with algorithmic trading is the instability and high volatility it presents, \cite{johnson2012financial}.
+The main problem with algorithmic trading is the instability and high volatility it presents, \cite{johnson2012financial}.
 Due to the high frequency with which the decisions have to be made only a small part of information can be processed which causes most of the algorithms to look alike.
 This in return causes the algorithms to respond to same inputs with same outputs resulting in ultra-fast crashes and spikes.
 
 Our concern in this work is the study of the impact of algorithmic trading, and some of it's assumptions, through models created by minority games. 
-Certain behaviour observed within these models can help us better understand the context of high frequency trading, and the vicinity analysis has shown that it can influence greatly the outcome of a competitive system, such as financial market.
+Certain behaviour observed within these models can help us better understand the context of high frequency trading, and the vicinity analysis has shown that it can influence greatly the outcome of a competitive system, such as a financial market.
 
 \section{Bounded rationality and Overfitting}
 \label{1:overfitting}
@@ -101,14 +101,14 @@ Bounded rationality on the other hand is the theory proposing that when humans m
 This view has been first theorized by Herbert A. Simon which he proposed as an alternative approach of modelling decision-making in economics, politics and other social areas. 
 Simon claims that the human mind uses it's extensive knowledge of the structure of the problem at hand to make the decision, thus usually resulting in satisfactory although generally not optimal behaviour.
 
-In machine learning when faced with the problem to find the underlying relationship between data a statistical model is obtained by making it fit to the data at hand.
-During this process one can decide how much data should be available for learning, with what parameters it is to be done, and what family of functions will be used to produce the statical model to fit the data.
+In machine learning, when faced with the problem to find the underlying relationship between data, a statistical model is obtained by making it fit to the data at hand.
+During this process one can decide how much data should be available for learning, with which parameters it is to be done, and what family of functions will be used to produce the statical model to fit the data.
 If too much data is given, or an inappropriate family of functions is used, a phenomenon of overfitting can occur.
 This means that the statistical model describes not only the data available but also the noise and eventual errors present in them.
 This phenomenon presents a problem when we try to use the apprehended model to predict the outcome of unseen data, where it will perform poorly as it has not generalized the underlying relationship.
 
-The bounded rationality and overfitting are rather similar for the purpose of this thesis.
-The bounded rationality tells us that human make decision using clever heuristics because they cannot process all the information, whether because they don't have the cognitive capabilities, the time or simply the information is not available.
+The bounded rationality and overfitting concepts are rather similar for the purpose of this thesis.
+The bounded rationality tells us that humans make decision using clever heuristics because they cannot process all the information, whether because they don't have the cognitive capabilities, the time or simply the information is not available.
 On the other hand overfitting phenomenon tells us that machines should use limited number of parameters for their models, lest they try predicting all the errors and noise, thus making terrible decision making algorithms.
 The duality between these two approaches is evident, both of them tell us that there is a certain limit to the information that should be used in a decision-making process and the model should reflect that limit in it's complexity.
 
@@ -117,21 +117,21 @@ The duality between these two approaches is evident, both of them tell us that t
 
 When modelling a competitive agent based systems one has to decide how to implement the structure and the relationships between agents.
 One way is to consider the agents as an independent set, whose only way of communicating with each other is through the global information passed to every agent in the same form.
-Another approach is to model the set of agents as a graph, where each vertex represents an agent and each edge is the passage of information between two agents.
-Of course, one can also model the system by uniting the two approaches so that the agents have access to global information but also to the local one through their neighbours.
+Another approach is to model the set of agents as a graph, where each vertex represents an agent and each edge the passage of information between two agents.
+Of course, one can also model the system by merging the two approaches so that the agents have access to global information but also to the local one through their neighbours.
 
 In the classical minority games vicinity is not considered, meaning that agents have access only to the global information.
 We find this kind of approach lacklustre when it comes to modelling financial markets and most of the other problems to which minority games have been applied.
 One important factor is the structure of the vicinity that is modelled as it influences the way information is passed around.
-We have tried various types of network ranging from the simplest to a more sophisticated ones.
+We have tried various types of network ranging from the simplest to more sophisticated ones.
 
-The most simple approach is to use a one dimensional array that represents a list of agents and divide it in a number of communities that we want to model.
+The simplest approach is to use a one dimensional array that represents a list of agents and divide it into a number of communities that we want to model.
 Another similar method, but with different characteristics, is to use a sliding window on the one dimensional array of agents, so that each agents has a personal neighbourhood.
 This way the number of communities is the same as the number of agents and makes the passage of information between them a bit slower.
 
 Observing the phenomenons that are being modelled it is easy to notice that they do not have a one dimensional structure.
-This has pushed us in the direction to try different kind of vicinity structures, mainly using already existing von Neumann and Moore neighbourhood.
-Defined as a set of point with Manhattan distance equal to 1, von Neumann neighbourhood can be extended to a vicinity of a point of radius R defined as a set of points with Manhattan distance less than or equal to R.
+This has pushed us in the direction to try different kind of vicinity structures, mainly using well known von Neumann and Moore neighbourhood.
+Defined as a set of point with Manhattan distance equal to 1, the von Neumann neighbourhood can be extended to a vicinity of a point of radius R defined as a set of points with Manhattan distance less than or equal to R.
 Moore neighbourhood on the other hand uses the Chebyshev distance, defined as a minimum distance along any axis between two points.
 As with the von Neumann neighbourhood, we can extend the vicinity defined with Chebyshev distance to the set of point where it is less than or equal to R.
 
@@ -150,5 +150,5 @@ Scale-free networks are widely observed in natural and human-made systems, inclu
 \section{Structure of the thesis}
 
 This thesis is structured as follows.
-In chapter \ref{chapter:minority} we expand on the introduction of the minority games made in this chapter, by describing some properties of the model, control parameters and possible modifications to better suite our intents. 
-Next we describe more in detail the vicinity structure in chapter \ref{chapter:vicinity}, how it is generated and what are their properties.
+In Chapter \ref{chapter:minority} we expand on the introduction of the minority games made in this chapter, by describing some properties of the model, control parameters and possible modifications to better suite our intents. 
+Next we describe more in detail the vicinity structure in Chapter \ref{chapter:vicinity}, how it is generated and what are their properties.
