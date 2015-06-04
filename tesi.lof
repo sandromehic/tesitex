@@ -1,26 +1,29 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Plot of standard deviation of attendance for a model with 101 agents and 32 runs. In the axis memory (brain size) of agents\relax }}{18}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of normalized variance versus control parameter $\alpha $\relax }}{19}{figure.caption.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Plot of standard deviation of attendance for a model with 101 agents and 32 runs. In the axis memory (brain size) of agents\relax }}{19}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Plot of normalized variance versus control parameter $\alpha $\relax }}{20}{figure.caption.6}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Plot of attendance over time for a model with agents with $M=2$ and $N=101$\relax }}{21}{figure.caption.7}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Plot of attendance over time for a model with agents with $M=5$ and $N=101$\relax }}{22}{figure.caption.8}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of attendance over time for a model with agents with $M=9$ and $N=101$\relax }}{23}{figure.caption.9}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $4$ on a model where agents have $M=4$\relax }}{24}{figure.caption.10}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $6$ on a model where agents have $M=6$\relax }}{25}{figure.caption.11}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Plot of $P(1|\mu )$ versus $\mu $ using a sliding window of length $5$ on a model where agents have $M=3$\relax }}{26}{figure.caption.12}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Active speculators and market price\relax }}{29}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Active speculators and market price\relax }}{30}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of 15 agents divided in 5 communities, consisting of 3 agents each\relax }}{33}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 21 fixed one-dimensional communities\relax }}{34}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of communities created using sliding window on one-dimensional array for agents 4 and 5 where each community consists of 5 agents\relax }}{35}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 sliding window one-dimensional communities\relax }}{35}{figure.caption.18}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Vicinity calculated with Chebyshev distance, called Moore neighbourhood\relax }}{37}{figure.caption.19}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces von Neumann vicinity with radius 1 and 2\relax }}{37}{figure.caption.20}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 von Neumann two-dimensional communities with $R=2$\relax }}{38}{figure.caption.21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Scale free graph and the adjacency matrix of a set of 101 agents\relax }}{40}{figure.caption.22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Small world graph and the adjacency matrix with $N=101$, $K=5$ and $\beta =0.75$\relax }}{42}{figure.caption.23}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Small world graph adjacency matrix with $N=101$, $K=5$ and $\beta = 0.25$\relax }}{43}{figure.caption.24}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of 15 agents divided in 5 communities, consisting of 3 agents each\relax }}{37}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 21 fixed one-dimensional communities\relax }}{38}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of communities created using sliding window on one-dimensional array for agents 4 and 5 where each community consists of 5 agents\relax }}{39}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 sliding window one-dimensional communities\relax }}{39}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Vicinity calculated with Chebyshev distance, called Moore neighbourhood\relax }}{41}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces von Neumann vicinity with radius 1 and 2\relax }}{41}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Graph and the adjacency matrix of a set of 101 agents divided into 101 von Neumann two-dimensional communities with $R=2$\relax }}{42}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Scale free graph and the adjacency matrix of a set of 101 agents\relax }}{44}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Small world graph and the adjacency matrix with $N=101$, $K=5$ and $\beta =0.75$\relax }}{46}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Small world graph adjacency matrix with $N=101$, $K=5$ and $\beta = 0.25$\relax }}{47}{figure.caption.24}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Hierarchical graph with $N=101$, $C=4$, $K=4$ and $\beta = 0.05$\relax }}{49}{figure.caption.25}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Hierarchical graph adjacency matrices with $N=101$, $K=5$ and $\beta =0.1$\relax }}{50}{figure.caption.26}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Hierarchical graph adjacency matrices with $N=101$, $K=5$ and $\beta =0.25$\relax }}{50}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

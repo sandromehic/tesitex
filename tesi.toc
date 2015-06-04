@@ -8,26 +8,27 @@
 \contentsline {section}{\numberline {1.6}Structure of the thesis}{10}{section.1.6}
 \contentsline {chapter}{\numberline {2}Minority games}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}The Basic Model}{13}{section.2.1}
-\contentsline {section}{\numberline {2.2}Definition of the Model}{14}{section.2.2}
-\contentsline {section}{\numberline {2.3}Major features}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Standard deviation of attendance}{17}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Phase Transition}{18}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Crowds and anti-crowds}{22}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Variations for financial markets}{23}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Producers}{25}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Speculators}{26}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Market ecology and crash simulation}{27}{subsection.2.4.3}
-\contentsline {chapter}{\numberline {3}Topology of the model and vicinity information}{30}{chapter.3}
-\contentsline {section}{\numberline {3.1}Model modifications to include local information}{31}{section.3.1}
-\contentsline {section}{\numberline {3.2}Fixed one-dimensional communities}{33}{section.3.2}
-\contentsline {section}{\numberline {3.3}Sliding window communities}{34}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{35}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Sliding window on a matrix}{36}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Von Neumann Vicinity}{36}{section.3.4}
-\contentsline {section}{\numberline {3.5}Scale free network vicinities}{39}{section.3.5}
-\contentsline {section}{\numberline {3.6}Small world network vicinities}{41}{section.3.6}
-\contentsline {section}{\numberline {3.7}Hierarchical vicinity structure}{43}{section.3.7}
-\contentsline {chapter}{\numberline {4}Results of competitive systems with different topologies}{44}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{45}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{46}{chapter.6}
-\contentsline {chapter}{Bibliography}{47}{section*.25}
+\contentsline {section}{\numberline {2.2}Definition of the Model}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Major features}{18}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Standard deviation of attendance}{18}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Phase Transition}{19}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Crowds and anti-crowds}{24}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Variations for financial markets}{25}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Producers}{27}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Speculators}{27}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Market ecology and crash simulation}{28}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Vicinity information}{31}{section.2.5}
+\contentsline {chapter}{\numberline {3}Topology of the model and vicinity information}{34}{chapter.3}
+\contentsline {section}{\numberline {3.1}Model modifications to include local information}{35}{section.3.1}
+\contentsline {section}{\numberline {3.2}Fixed one-dimensional communities}{37}{section.3.2}
+\contentsline {section}{\numberline {3.3}Sliding window communities}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Sliding window on one-dimensional array}{39}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Sliding window on a matrix}{40}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Von Neumann Vicinity}{40}{section.3.4}
+\contentsline {section}{\numberline {3.5}Scale free network vicinities}{43}{section.3.5}
+\contentsline {section}{\numberline {3.6}Small world network vicinities}{45}{section.3.6}
+\contentsline {section}{\numberline {3.7}Hierarchical vicinity structure}{47}{section.3.7}
+\contentsline {chapter}{\numberline {4}Results of competitive systems with different topologies}{51}{chapter.4}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{52}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}
+\contentsline {chapter}{Bibliography}{54}{section*.28}
