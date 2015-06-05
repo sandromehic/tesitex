@@ -27,9 +27,9 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Plot of normalized variance versus control parameter $\alpha $ for a basic minority game\relax }}{53}{figure.caption.28}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for fixed one-dimensional communities\relax }}{56}{figure.caption.29}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window one-dimensional communities\relax }}{57}{figure.caption.30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window two-dimensional communities with von Neumann vicinities\relax }}{57}{figure.caption.31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for scale free communities generated with Barabasi-Albert algorithm\relax }}{58}{figure.caption.32}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for small world communities generated with Watts-Strogatz algorithm\relax }}{58}{figure.caption.33}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window one-dimensional communities\relax }}{59}{figure.caption.32}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window two-dimensional communities with von Neumann vicinities\relax }}{60}{figure.caption.33}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for scale free communities generated with Barabasi-Albert algorithm\relax }}{60}{figure.caption.34}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for small world communities generated with Watts-Strogatz algorithm\relax }}{61}{figure.caption.35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -63,15 +63,111 @@ where $d$ is the mean degree of nodes in the network.
 
 The most simple topology is that of completely isolated local communities.
 Also called patch neighbourhood it can be seen in \ref{fig:patch vicinity partial} that for various values of $\alpha$, different values of $\beta$ are optimal.
-In case of $\alpha=0.03970223$ 
+The data for the first two curves equivalent to models with information length $4$ and information length $6$ are shown in Tables \ref{table:fixed m4} and \ref{table:fixed m6}.
+First three rows of each table has been highlighted and tells us what the minimum $\beta$ should be when planning a competitive system with certain $\alpha$ in order to minimize the loses.
+So we can see that for $\alpha=0.03990025$ our best option is to keep our $\beta$ around $0.05$, that is divide the whole population in around 20 communities.
+But $\alpha=0.03990025$ is still low to bring a system in a bit more efficient regime, so we look at the second curve from Figure \ref{fig:patch vicinity partial} where $\alpha=0.159601$.
+For that value of $\alpha$ our best option is to keep our $\beta$ in the interval $[0.2,0.35]$, ie. divide the total number of agents in $3$ or $4$ big communities.
 
-\begin{figure}[h]
+For successive network topologies we will only bring forth tables with best results, which here have been presented completely.
+
+\begin{figure}[h!]
 \begin{center}
 \includegraphics[scale=0.4]{images/results/vicinity_patch_n401_rounds10000_partial.pdf}
 \caption{Plot of normalized variance versus control parameter $\beta$ for various values of $\alpha$  for fixed one-dimensional communities}
 \label{fig:patch vicinity partial}
 \end{center}
 \end{figure}
+
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &       alpha &         beta & meanNormVar &       var \\
+\midrule
+\rowcolor{Goldenrod}
+    23 &  4 &  401 &  0.03990025 &   0.05735661 &  0.08778602 &  35.20219 \\
+\rowcolor{Goldenrod}
+    19 &  4 &  401 &  0.03990025 &   0.04738155 &   0.0899272 &  36.06081 \\
+\rowcolor{Goldenrod}
+    21 &  4 &  401 &  0.03990025 &   0.05236908 &  0.09083007 &  36.42286 \\
+    15 &  4 &  401 &  0.03990025 &   0.03740648 &  0.09194704 &  36.87076 \\
+    27 &  4 &  401 &  0.03990025 &   0.06733167 &  0.09309645 &  37.33168 \\
+    17 &  4 &  401 &  0.03990025 &   0.04239401 &  0.09357988 &  37.52553 \\
+    25 &  4 &  401 &  0.03990025 &   0.06234414 &   0.0941925 &  37.77119 \\
+    13 &  4 &  401 &  0.03990025 &   0.03241895 &  0.09577665 &  38.40644 \\
+    31 &  4 &  401 &  0.03990025 &   0.07730673 &  0.09799674 &  39.29669 \\
+    29 &  4 &  401 &  0.03990025 &    0.0723192 &  0.09831647 &  39.42491 \\
+    11 &  4 &  401 &  0.03990025 &   0.02743142 &   0.1021554 &  40.96432 \\
+     9 &  4 &  401 &  0.03990025 &   0.02244389 &    0.102481 &  41.09487 \\
+     7 &  4 &  401 &  0.03990025 &   0.01745636 &   0.1104009 &  44.27077 \\
+     5 &  4 &  401 &  0.03990025 &   0.01246883 &   0.1139728 &  45.70309 \\
+    35 &  4 &  401 &  0.03990025 &    0.0872818 &   0.1165516 &   46.7372 \\
+     3 &  4 &  401 &  0.03990025 &  0.007481297 &   0.1214733 &   48.7108 \\
+    37 &  4 &  401 &  0.03990025 &   0.09226933 &   0.1236184 &  49.57097 \\
+    41 &  4 &  401 &  0.03990025 &    0.1022444 &   0.1373252 &  55.06739 \\
+    45 &  4 &  401 &  0.03990025 &    0.1122195 &   0.1622121 &  65.04706 \\
+    51 &  4 &  401 &  0.03990025 &     0.127182 &   0.1847199 &  74.07266 \\
+    59 &  4 &  401 &  0.03990025 &    0.1471322 &   0.2288271 &  91.75965 \\
+    67 &  4 &  401 &  0.03990025 &    0.1670823 &   0.2921831 &  117.1654 \\
+    81 &  4 &  401 &  0.03990025 &     0.201995 &    0.375436 &  150.5499 \\
+   101 &  4 &  401 &  0.03990025 &    0.2518703 &   0.5081641 &  203.7738 \\
+   135 &  4 &  401 &  0.03990025 &    0.3366584 &   0.6818775 &  273.4329 \\
+   201 &  4 &  401 &  0.03990025 &    0.5012469 &   0.9980141 &  400.2037 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Table of a model with $M=4$, with 2 bits dedicated to global game and 2 bits to local community information}
+\label{table:fixed m4}
+\end{table}
+
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &     alpha &         beta & meanNormVar &       var \\
+\midrule
+\rowcolor{Goldenrod}
+   101 &  6 &  401 &  0.159601 &    0.2518703 &  0.08792742 &  35.25889 \\
+\rowcolor{Goldenrod}
+    81 &  6 &  401 &  0.159601 &     0.201995 &  0.09028853 &   36.2057 \\
+\rowcolor{Goldenrod}
+   135 &  6 &  401 &  0.159601 &    0.3366584 &  0.09316642 &  37.35974 \\
+    67 &  6 &  401 &  0.159601 &    0.1670823 &  0.09912482 &  39.74905 \\
+    59 &  6 &  401 &  0.159601 &    0.1471322 &   0.1043162 &  41.83079 \\
+    51 &  6 &  401 &  0.159601 &     0.127182 &   0.1103088 &  44.23381 \\
+    45 &  6 &  401 &  0.159601 &    0.1122195 &   0.1179627 &  47.30303 \\
+    41 &  6 &  401 &  0.159601 &    0.1022444 &   0.1226634 &  49.18803 \\
+    37 &  6 &  401 &  0.159601 &   0.09226933 &    0.130943 &  52.50814 \\
+    35 &  6 &  401 &  0.159601 &    0.0872818 &   0.1342167 &  53.82088 \\
+    31 &  6 &  401 &  0.159601 &   0.07730673 &   0.1379274 &   55.3089 \\
+    29 &  6 &  401 &  0.159601 &    0.0723192 &   0.1444711 &   57.9329 \\
+    27 &  6 &  401 &  0.159601 &   0.06733167 &   0.1472001 &  59.02724 \\
+   201 &  6 &  401 &  0.159601 &    0.5012469 &   0.1497855 &  60.06398 \\
+    25 &  6 &  401 &  0.159601 &   0.06234414 &   0.1503266 &  60.28095 \\
+    23 &  6 &  401 &  0.159601 &   0.05735661 &   0.1553099 &  62.27929 \\
+    21 &  6 &  401 &  0.159601 &   0.05236908 &   0.1588146 &  63.68464 \\
+    19 &  6 &  401 &  0.159601 &   0.04738155 &   0.1656952 &  66.44376 \\
+    17 &  6 &  401 &  0.159601 &   0.04239401 &   0.1692265 &  67.85981 \\
+    15 &  6 &  401 &  0.159601 &   0.03740648 &   0.1751308 &  70.22744 \\
+    13 &  6 &  401 &  0.159601 &   0.03241895 &   0.1797978 &  72.09891 \\
+    11 &  6 &  401 &  0.159601 &   0.02743142 &   0.1847625 &  74.08975 \\
+     9 &  6 &  401 &  0.159601 &   0.02244389 &   0.1919552 &  76.97405 \\
+     7 &  6 &  401 &  0.159601 &   0.01745636 &   0.1958953 &  78.55403 \\
+     5 &  6 &  401 &  0.159601 &   0.01246883 &   0.1999117 &   80.1646 \\
+     3 &  6 &  401 &  0.159601 &  0.007481297 &   0.2016834 &  80.87504 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Table of a model with $M=6$, with 3 bits dedicated to global game and 3 bits to local community information}
+\label{table:fixed m6}
+\end{table}
+
+\subsection{Sliding window one-dimensional communities}
 
 \begin{figure}[h]
 \begin{center}
@@ -80,6 +176,8 @@ In case of $\alpha=0.03970223$
 \label{fig:sliding vicinity partial}
 \end{center}
 \end{figure}
+
+\subsection{Sliding window von Neumann neighbourhood}
 
 \begin{figure}[h]
 \begin{center}
