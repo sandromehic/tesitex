@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Standard deviation of attendance}{18}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Phase Transition}{19}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Crowds and anti-crowds}{24}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Variations for financial markets}{25}{section.2.4}
+\contentsline {section}{\numberline {2.4}Variations of the model to simulate financial markets}{25}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Producers}{27}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Speculators}{27}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Market ecology and crash simulation}{28}{subsection.2.4.3}
@@ -29,6 +29,16 @@
 \contentsline {section}{\numberline {3.6}Small world network vicinities}{45}{section.3.6}
 \contentsline {section}{\numberline {3.7}Hierarchical vicinity structure}{47}{section.3.7}
 \contentsline {chapter}{\numberline {4}Results of competitive systems with different topologies}{51}{chapter.4}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{52}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}
-\contentsline {chapter}{Bibliography}{54}{section*.28}
+\contentsline {section}{\numberline {4.1}Information in space and time}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Fixed community structures results}{55}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Fixed one-dimensional communities}{55}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Variable community structures results}{56}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Scale free results}{56}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Small world results}{56}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Hierarchical network results}{56}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Real world or artificial network}{56}{section.4.4}
+\contentsline {section}{\numberline {4.5}Information in space and time - second part}{56}{section.4.5}
+\contentsline {section}{\numberline {4.6}Final considerations}{56}{section.4.6}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{59}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{60}{chapter.6}
+\contentsline {chapter}{Bibliography}{61}{section*.34}
