@@ -61,15 +61,15 @@ where $d$ is the mean degree of nodes in the network.
 
 \subsection{Fixed one-dimensional communities}
 
-The most simple topology is that of completely isolated local communities.
-Also called patch neighbourhood it can be seen in \ref{fig:patch vicinity partial} that for various values of $\alpha$, different values of $\beta$ are optimal.
+The most simple topology is that of completely isolated local communities, also called patch neighbourhood. It can be seen in Figure \ref{fig:patch vicinity partial} that for various values of $\alpha$, different values of $\beta$ are optimal.
+
 The data for the first two curves equivalent to models with information length $4$ and information length $6$ are shown in Tables \ref{table:fixed m4} and \ref{table:fixed m6}.
 First three rows of each table has been highlighted and tells us what the minimum $\beta$ should be when planning a competitive system with certain $\alpha$ in order to minimize the loses.
-So we can see that for $\alpha=0.03990025$ our best option is to keep our $\beta$ around $0.05$, that is divide the whole population in around 20 communities.
+So we can see that for $\alpha=0.03990025$ our best option is to keep our $\beta$ around $0.05$, that is divide the whole population in around 20 communities in case of patch neighbourhoods, or make the mean degree of nodes $5\%$ of the total number of nodes in other types of networks.
 But $\alpha=0.03990025$ is still low to bring a system in a bit more efficient regime, so we look at the second curve from Figure \ref{fig:patch vicinity partial} where $\alpha=0.159601$.
 For that value of $\alpha$ our best option is to keep our $\beta$ in the interval $[0.2,0.35]$, ie. divide the total number of agents in $3$ or $4$ big communities.
 
-For successive network topologies we will only bring forth tables with best results, which here have been presented completely.
+For successive network topologies we will only bring forth tables with best results, which here have been presented entirely.
 
 \begin{figure}[h!]
 \begin{center}
@@ -169,6 +169,10 @@ neighs &  M &    N &     alpha &         beta & meanNormVar &       var \\
 
 \subsection{Sliding window one-dimensional communities}
 
+When sliding window communities are introduced, as already theorized in Section \ref{sec:fixed communities}, information starts flowing between communities as they are no longer isolated.
+This means that each agents has access to different kind of information and renders the cooperation more difficult to achieve.
+The experimental results have shown this to be true and we can see in Figure \ref{fig:sliding vicinity partial} that the curves have shifted slightly to the right, ie. to higher values of $\beta$ meaning that larger communities are needed in order to achieve same efficiency as isolated communities.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.4]{images/results/vicinity_sliding_n401_rounds10000_partial.pdf}
@@ -177,7 +181,43 @@ neighs &  M &    N &     alpha &         beta & meanNormVar &       var \\
 \end{center}
 \end{figure}
 
+The results are more evident when we look at the values of $\beta$ that minimize the volatility of the model in Table \ref{table:sliding m4}.
+While for $\alpha=0.03990025$ we found the optimal value $\beta\approx 0.05$ when isolated communities were used, we have found for the same value of $\alpha$ that $\beta\approx 0.10$ should be used for sliding window communities.
+This means that instead of dividing the set of agents in $20$ communities a more realistic partition number should be $10$.
+For $\alpha=0.159601$ we can see that the optimal value of $\beta$ is $0.5$ that tells us communities should be larger as we increment $\alpha$ when sliding window communities are concerned.
+
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &       alpha &         beta & meanNormVar &       var \\
+\midrule
+    45 &  4 &  401 &  0.03990025 &    0.1122195 &   0.1456658 &  58.41198 \\
+    41 &  4 &  401 &  0.03990025 &    0.1022444 &   0.1468764 &  58.89743 \\
+    37 &  4 &  401 &  0.03990025 &   0.09226933 &   0.1470761 &  58.97754 \\
+    67 &  4 &  401 &  0.03990025 &    0.1670823 &   0.1480023 &  59.34892 \\
+    31 &  4 &  401 &  0.03990025 &   0.07730673 &   0.1482901 &  59.46434 \\
+\midrule
+   201 &  6 &  401 &  0.159601 &    0.5012469 &   0.1469697 &  58.93485 \\
+   135 &  6 &  401 &  0.159601 &    0.3366584 &   0.1513832 &  60.70467 \\
+   101 &  6 &  401 &  0.159601 &    0.2518703 &   0.1613675 &  64.70837 \\
+    81 &  6 &  401 &  0.159601 &     0.201995 &   0.1709139 &  68.53649 \\
+    67 &  6 &  401 &  0.159601 &    0.1670823 &   0.1806012 &  72.42107 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Sliding window neighbourhood table}
+\label{table:sliding m4}
+\end{table}
+
 \subsection{Sliding window von Neumann neighbourhood}
+
+As long as von Neumann vicinity is concerned the results are similar to the first two cases, as expected.
+In Figure \ref{fig:von neumann vicinity partial} different curves for different $\alpha$ values are drawn.
+Von Neumann neighbourhood is defined only by the radius parameter $R$, so the number of neighbouring agents is reduced to a small subset of all possible natural numbers.
+This has led us to the conclusion that von Neumann neighbourhood is not a good candidate to construct links between agents in the case studied.
 
 \begin{figure}[h]
 \begin{center}
@@ -187,11 +227,57 @@ neighs &  M &    N &     alpha &         beta & meanNormVar &       var \\
 \end{center}
 \end{figure}
 
+In Table \ref{table:vonNeumann table} we show the optimal values of $\beta$ for various values of $\alpha$.
+Results are much alike other results for fixed neighbourhoods, for small values of $\alpha$, $\beta$ is in the interval $[0.03,0.12]$, dividing the set of agents into smaller communities.
+
+For higher $\alpha$ values, as we can see in the case of $\alpha=0.6352357$ larger communities are preferred, but if we look ate the values of volatility, ie. mean normalized variance, we can find that the difference between them is small when compared to lower $\alpha$ values. 
+This fact can be easily seen in most of the figures, as we increment the $\alpha$ the curves become horizontal lines, telling us that the dimension of the vicinity does not influence greatly the volatility of the game.
+
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &      alpha &        beta & meanNormVar &       var \\
+\midrule
+    25 &  4 &  403 &  0.03970223 &  0.06203474 &    0.115673 &  46.61621 \\
+    41 &  4 &  403 &  0.03970223 &    0.101737 &   0.1158334 &  46.68086 \\
+    13 &  4 &  403 &  0.03970223 &  0.03225806 &   0.1271843 &  51.25529 \\
+     5 &  4 &  403 &  0.03970223 &  0.01240695 &     0.14656 &  59.06369 \\
+    61 &  4 &  403 &  0.03970223 &   0.1513648 &   0.1668666 &  67.24726 \\
+    85 &  4 &  403 &  0.03970223 &   0.2109181 &   0.2574937 &  103.7699 \\
+\midrule
+    85 &  6 &  403 &  0.1588089 &   0.2109181 &   0.1201926 &  48.43763 \\
+    61 &  6 &  403 &  0.1588089 &   0.1513648 &   0.1358312 &  54.73998 \\
+    41 &  6 &  403 &  0.1588089 &    0.101737 &   0.1563717 &  63.01779 \\
+    25 &  6 &  403 &  0.1588089 &  0.06203474 &   0.1796163 &  72.38538 \\
+    13 &  6 &  403 &  0.1588089 &  0.03225806 &   0.2023782 &  81.55843 \\
+     5 &  6 &  403 &  0.1588089 &  0.01240695 &   0.2128725 &  85.78764 \\
+\midrule
+    85 &  8 &  403 &  0.6352357 &   0.2109181 &   0.1853413 &  74.69255 \\
+    61 &  8 &  403 &  0.6352357 &   0.1513648 &   0.2040382 &  82.22741 \\
+    41 &  8 &  403 &  0.6352357 &    0.101737 &   0.2128382 &  85.77379 \\
+    25 &  8 &  403 &  0.6352357 &  0.06203474 &   0.2253677 &  90.82317 \\
+    13 &  8 &  403 &  0.6352357 &  0.03225806 &   0.2336805 &  94.17324 \\
+     5 &  8 &  403 &  0.6352357 &  0.01240695 &   0.2378988 &  95.87322 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{von Neumann neighbourhood}
+\label{table:vonNeumann table}
+\end{table}
 
 \section{Variable community structures results}
 \label{sec:hierarchical}
 
+Fixed communities are easy to implement and optimize, yet they are not representative of real world examples.
+Different network topologies have been introduced in Sections \ref{sec:scale free}, \ref{sec:small world} and \ref{sec:hierarchical vicinity}.
+
 \subsection{Scale free results}
+
+Scale free networks generated with Barabasi-Albert algorithm create one large community in which different nodes have different degrees, based on their popularity.
+By using the peripheral attachment mechanism some nodes end up with greater neighbourhoods while the last nodes that are added belong to smaller communities.
 
 \begin{figure}[h]
 \begin{center}
@@ -201,23 +287,90 @@ neighs &  M &    N &     alpha &         beta & meanNormVar &       var \\
 \end{center}
 \end{figure}
 
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &       alpha &        beta & meanNormVar &       var \\
+\midrule
+    61 &  4 &  403 &  0.03970223 &   0.1513648 &   0.1161257 &  46.79867 \\
+    64 &  4 &  403 &  0.03970223 &   0.1588089 &   0.1173796 &  47.30398 \\
+    80 &  4 &  403 &  0.03970223 &   0.1985112 &   0.1196375 &  48.21391 \\
+    74 &  4 &  403 &  0.03970223 &   0.1836228 &    0.120003 &  48.36119 \\
+    54 &  4 &  403 &  0.03970223 &    0.133995 &   0.1200037 &  48.36148 \\
+\midrule
+   180 &  6 &  403 &  0.1588089 &   0.4466501 &   0.1166436 &  47.00736 \\
+   151 &  6 &  403 &  0.1588089 &   0.3746898 &   0.1271984 &  51.26096 \\
+   129 &  6 &  403 &  0.1588089 &   0.3200993 &   0.1386061 &  55.85824 \\
+   114 &  6 &  403 &  0.1588089 &   0.2828784 &   0.1468814 &  59.19321 \\
+   101 &  6 &  403 &  0.1588089 &   0.2506203 &   0.1550459 &  62.48349 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{von Neumann neighbourhood}
+\label{table:Scale free vicinity table}
+\end{table}
+
 \subsection{Small world results}
 
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.4]{images/results/vicinity_WattsStrogatz_n403_rounds10000_partial.pdf}
 \caption{Plot of normalized variance versus control parameter $\beta$ for various values of $\alpha$  for small world communities generated with Watts-Strogatz algorithm}
-\label{fig:scale free vicinity partial}
+\label{fig:small world vicinity partial}
 \end{center}
 \end{figure}
 
+\begin{table}
+\tiny
+\centering
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+neighs &  M &    N &       alpha &         beta & meanNormVar &       var \\
+\midrule
+    41 &  4 &  403 &  0.03970223 &     0.101737 &   0.1138109 &   45.8658 \\
+    37 &  4 &  403 &  0.03970223 &   0.09181141 &   0.1185464 &  47.77421 \\
+    33 &  4 &  403 &  0.03970223 &   0.08188586 &   0.1192244 &  48.04742 \\
+    45 &  4 &  403 &  0.03970223 &    0.1116625 &   0.1195567 &  48.18135 \\
+    35 &  4 &  403 &  0.03970223 &   0.08684864 &   0.1203266 &  48.49161 \\
+\midrule
+   135 &  6 &  403 &  0.1588089 &    0.3349876 &   0.1159726 &  46.73697 \\
+   101 &  6 &  403 &  0.1588089 &    0.2506203 &   0.1267708 &  51.08865 \\
+    81 &  6 &  403 &  0.1588089 &    0.2009926 &   0.1376265 &  55.46349 \\
+    69 &  6 &  403 &  0.1588089 &    0.1712159 &   0.1432754 &  57.73999 \\
+    59 &  6 &  403 &  0.1588089 &     0.146402 &   0.1546167 &  62.31052 \\
+\bottomrule
+\end{tabular}%
+}
+\caption{von Neumann neighbourhood}
+\label{table:Small world vicinity table}
+\end{table}
+
 \subsection{Hierarchical network results}
+
+%\begin{figure}[h]
+%\begin{center}
+%\includegraphics[scale=0.4]{images/results/vicinity_WattsStrogatz_n403_rounds10000_partial.pdf}
+%\caption{Plot of normalized variance versus control parameter $\beta$ for various values of $\alpha$  for small world communities generated with Watts-Strogatz algorithm}
+%\label{fig:scale free vicinity partial}
+%\end{center}
+%\end{figure}
+
+%\begin{table}
+%\tiny
+%\centering
+%\resizebox{\columnwidth}{!}{%
+%%
+%}
+%\caption{von Neumann neighbourhood}
+%\label{table:vonNeumann table}
+%\end{table}
 
 \section{Real world or artificial network}
 \label{sec:confrontation}
-
-\section{Information in space and time - second part}
-\label{sec:spacetime2}
 
 \section{Final considerations}
 \label{sec:final}

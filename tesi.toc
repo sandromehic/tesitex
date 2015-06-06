@@ -32,15 +32,14 @@
 \contentsline {section}{\numberline {4.1}Information in space and time}{52}{section.4.1}
 \contentsline {section}{\numberline {4.2}Fixed community structures results}{55}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Fixed one-dimensional communities}{55}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Sliding window one-dimensional communities}{59}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Sliding window one-dimensional communities}{56}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Sliding window von Neumann neighbourhood}{59}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Variable community structures results}{59}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Scale free results}{59}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Small world results}{59}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Hierarchical network results}{59}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Real world or artificial network}{59}{section.4.4}
-\contentsline {section}{\numberline {4.5}Information in space and time - second part}{59}{section.4.5}
-\contentsline {section}{\numberline {4.6}Final considerations}{59}{section.4.6}
-\contentsline {chapter}{\numberline {5}Real world applications of the research results}{62}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{63}{chapter.6}
-\contentsline {chapter}{Bibliography}{64}{section*.36}
+\contentsline {section}{\numberline {4.3}Variable community structures results}{62}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Scale free results}{62}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Small world results}{64}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Hierarchical network results}{64}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Real world or artificial network}{64}{section.4.4}
+\contentsline {section}{\numberline {4.5}Final considerations}{64}{section.4.5}
+\contentsline {chapter}{\numberline {5}Real world applications of the research results}{66}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{67}{chapter.6}
+\contentsline {chapter}{Bibliography}{68}{section*.40}
