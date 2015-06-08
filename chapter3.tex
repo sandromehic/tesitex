@@ -1,4 +1,4 @@
-\chapter{Results of competitive systems with different topologies}
+\chapter{Initial results with different topologies}
 \label{chapter:results}
 
 In this chapter we present the results obtained through computational simulation of the minority games that include vicinity and are characterized by different network structures.
@@ -272,7 +272,7 @@ neighs &  M &    N &      alpha &        beta & meanNormVar &       var \\
 \label{sec:hierarchical}
 
 Fixed communities are easy to implement and optimize, yet they are not representative of real world examples.
-Different network topologies have been introduced in Sections \ref{sec:scale free}, \ref{sec:small world} and \ref{sec:hierarchical vicinity}.
+Different network topologies have been introduced in Sections \ref{sec:scale free}, \ref{sec:small world} and \ref{sec:hierarchical vicinity}. Here we report the experimental results of those network structures.
 
 \subsection{Scale free results}
 
@@ -286,6 +286,15 @@ By using the peripheral attachment mechanism some nodes end up with greater neig
 \label{fig:scale free vicinity partial}
 \end{center}
 \end{figure}
+
+As long as the number of edges a nodes in the graph is considered, we have calculated the mean degree of nodes for scale free networks, and use that number to calculate a mean $\beta$ value.
+Results are show in Table \ref{table:Scale free vicinity table}, from which we can see that scale free topology performs consistently better than pure sliding window vicinity structure and a little better than von Neumann neighbourhood.
+On the other hand it is worse off than patch network, and this result is not surprising as we have already theorized on the better performance of patch network due to its isolated communities.
+
+Optimal value for scale free network for $\beta$ is in the interval $[0.13,0.19]$ for $\alpha=0.03970223$ while it is significantly higher for $\alpha=0.1588089$ and is close to $0.5$.
+Note that in the column \textit{neighs} we show the mean degree of nodes, and not the parameter $k$ used to generate the scale free network with the Barabasi-Albert algorithm.
+The parameter $k$ tells us to how many nodes a newcomer should be connected, hence the mean degree of nodes will be higher unless we start with an already built structure.
+For example to obtain an average $61$ neighbouring nodes as is optimal for $\alpha=0.03970223$ we should use $k=33$ and so on.
 
 \begin{table}
 \tiny
@@ -309,11 +318,16 @@ neighs &  M &    N &       alpha &        beta & meanNormVar &       var \\
 \bottomrule
 \end{tabular}%
 }
-\caption{von Neumann neighbourhood}
+\caption{Scale free neighbourhood table}
 \label{table:Scale free vicinity table}
 \end{table}
 
 \subsection{Small world results}
+
+Results for small world are shown in Figure \ref{fig:small world vicinity partial} and numerical results can be found in Table \ref{table:Small world vicinity table}.
+We can see that when the value of the volatility is concerned, there are no significant changes from scale free case, however the optimal values of $\beta$ are different.
+In this case the degree of a node is same for all the nodes in the network, as edges are just rewired, not added nor deleted.
+Optimal values for $\beta$ are in the interval $[0.8,0.11]$ for $\alpha=0.03970223$, while for $\alpha=0.1588089$ it is preferable to have a higher value of $\beta$ as in other cases.
 
 \begin{figure}[h]
 \begin{center}
@@ -345,11 +359,11 @@ neighs &  M &    N &       alpha &         beta & meanNormVar &       var \\
 \bottomrule
 \end{tabular}%
 }
-\caption{von Neumann neighbourhood}
+\caption{Small world neighbourhood}
 \label{table:Small world vicinity table}
 \end{table}
 
-\subsection{Hierarchical network results}
+%\subsection{Hierarchical network results}
 
 %\begin{figure}[h]
 %\begin{center}
@@ -369,8 +383,60 @@ neighs &  M &    N &       alpha &         beta & meanNormVar &       var \\
 %\label{table:vonNeumann table}
 %\end{table}
 
-\section{Real world or artificial network}
+\section{Confrontation of different topologies}
 \label{sec:confrontation}
 
-\section{Final considerations}
-\label{sec:final}
+After examining first results we can see that community structure does influence the efficiency of the model, but we have to understand does it do better than basic minority game.
+It is easy to see that a model where agents have $M$ bits available for local history and $M$ bits available for global history will outperform a basic agent that has $M$ bit for only global history.
+This is true as long as $\alpha$ is kept lower or slightly above its critical value.
+But how does our \textit{community} agent bode against a basic agent with $2M$ bits to process global history?
+In this case the quantity of information available to both agents is the same, $2M$ bits, but the quality of information is different.
+Is our intuition to differentiate information in spatial and temporal justified?
+
+In Figure \ref{fig:fixed vicinity full classic} we show plot the volatility of the model versus the $\beta$ parameter introduced as the percentage of neighbours to total number of agents.
+In full lines is shown the volatility of models with community agents, while in the dotted line one can see the volatility of a basic minority game for the same $\alpha$ value.
+As we can easily see, for fixed patch neighbourhoods, the introduction of spatial information in the form of communities renders the model more efficient in terms of resource distribution.
+The basic minority games performs better only when high values of $\beta$ are used, which means that communities become so large that they start overlapping with global set and hence information is duplicated.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/results/vicinity_patch_n401_rounds10000_full_time.pdf}
+\caption{MGs with fixed patch vicinity in full line vs classic minority game in dotted line for different $\alpha$ values}
+\label{fig:fixed vicinity full classic}
+\end{center}
+\end{figure}
+
+The confrontation between different topologies shed other light on the problem.
+In Figure \ref{fig:topologies confrontation 2} we confront different network structures for $\alpha=0.03970223$.
+These curves have already been plotted separately as results of each topology, but when we plot them together we can arrive to certain conclusions.
+The fixed patch topology, with its isolated communities, is the optimal one.
+Fixed patch topology gives us the lowest volatility in a model while also organizing our set into smaller communities.
+We already theorized that by separating agents into communities that don't exchange information should make the model more efficient, and it has been confirmed by these experimental results.
+On the other hand sliding window topology has the worst performance as it has a complementary philosophy with respect to fixed patch one.
+While in the first case agents that are neighbours by definition belong to the same community, in sliding window topology no two agents belong to the same community as it is defined ad hoc per agent.
+This makes the exploitation of information much more difficult, and as a result leaves the model with higher volatility and larger communities in its best case scenario.
+
+The scale free and small world topologies are the middle ground.
+They are generated randomly to some extent, in scale free case we have peripheral attachment that is the probability to be assigned to certain communities, and in small world case we have the rewiring that perturbs the graph edges.
+In this way these \textit{real world} topologies retain the free flow of information between communities, and yet have a chance to isolate them more between each other when compared to sliding window technique.
+
+In Figure \ref{fig:topologies confrontation 3} we show same kind of results for different topologies for a different value of $\alpha=0.1588089$.
+As we can see the optimal values of $\beta$ change, but qualitatively the results remain the same.
+After we have passed the critical value of $\alpha$ the community structure seems to worsen the efficiency of the model, but this consideration does not take into account the \textit{credibility} of information.
+This point will be tackled in Chapter \ref{chapter:algorithm}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/results/topologies_confront_m2.pdf}
+\caption{Different topologies confrontation. Percentage of neighbouring agents on x axis, volatility on y axis, and 2 bits to local MG and 2 bits to global MG}
+\label{fig:topologies confrontation 2}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.4]{images/results/topologies_confront_m3.pdf}
+\caption{Different topologies confrontation. Percentage of neighbouring agents on x axis, volatility on y axis, and 3 bits to local MG and 3 bits to global MG}
+\label{fig:topologies confrontation 3}
+\end{center}
+\end{figure}

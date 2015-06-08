@@ -29,7 +29,10 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for fixed one-dimensional communities\relax }}{56}{figure.caption.29}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window one-dimensional communities\relax }}{59}{figure.caption.32}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for sliding window two-dimensional communities with von Neumann vicinities\relax }}{62}{figure.caption.34}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for scale free communities generated with Barabasi-Albert algorithm\relax }}{64}{figure.caption.36}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for scale free communities generated with Barabasi-Albert algorithm\relax }}{63}{figure.caption.36}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Plot of normalized variance versus control parameter $\beta $ for various values of $\alpha $ for small world communities generated with Watts-Strogatz algorithm\relax }}{65}{figure.caption.38}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces MGs with fixed patch vicinity in full line vs classic minority game in dotted line for different $\alpha $ values\relax }}{67}{figure.caption.40}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Different topologies confrontation. Percentage of neighbouring agents on x axis, volatility on y axis, and 2 bits to local MG and 2 bits to global MG\relax }}{68}{figure.caption.41}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Different topologies confrontation. Percentage of neighbouring agents on x axis, volatility on y axis, and 3 bits to local MG and 3 bits to global MG\relax }}{68}{figure.caption.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
