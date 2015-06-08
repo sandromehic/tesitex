@@ -39,5 +39,14 @@
 \contentsline {subsection}{\numberline {4.3.2}Small world results}{64}{subsection.4.3.2}
 \contentsline {section}{\numberline {4.4}Confrontation of different topologies}{64}{section.4.4}
 \contentsline {chapter}{\numberline {5}Proposed algorithm and real world applications}{69}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{70}{chapter.6}
-\contentsline {chapter}{Bibliography}{71}{section*.43}
+\contentsline {section}{\numberline {5.1}From experimental results to solution}{70}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Optimal number of communities}{70}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Hierarchical topology}{70}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}The algorithm}{70}{subsection.5.1.3}
+\contentsline {section}{\numberline {5.2}Real world applications}{70}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Financial markets}{70}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Delay Tolerant Networks}{70}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Smart energy resource allocation}{70}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Computer resource allocation}{70}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Conclusions}{71}{chapter.6}
+\contentsline {chapter}{Bibliography}{72}{section*.43}
