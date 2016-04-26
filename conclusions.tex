@@ -1,2 +1,30 @@
-\chapter{Conclusions}
+\chapter{Conclusions and future developments}
 \label{chapter:conclusions}
+
+Starting from the basic minority game model that has originated as means to simulate financial markets and trying to study the phenomenon of market crashes we have expanded our scope to the study of information and topology in competitive systems with limited resources.
+The different behaviour of competitive systems modelled with minority games has demonstrated that the efficient distribution of resources inside those systems is defined by the quantity of information and its quality.
+We have decided to study various cases of how a more efficient distribution of resources can be achieved.
+
+First result and rather simple one is to bring the system as closely as possible to the critical value of its control parameter $\alpha$.
+This result cannot always be achieved so we have decided to study how the quality of the information available can interact with the efficiency of the system, and we have analysed more closely the cases when the model is in the symmetric phase with $\alpha<\alpha_c$.
+From basic intuition that minority game problems are encountered and resolved by various ecosystems that have evolved in time, human and animal alike, and that in those ecosystem the communication between agents is a basic component, we have decided to study the problem from this point of view.
+By allowing communication between agents a new kind of information is introduced in the model, defined as spatial information as it is defined by the agents in the vicinity of the agent taken in consideration, while the global information that reflect the attendance of the entire set of agents remains available.
+We have seen that with the introduction of a different kind of information the agents that have global and local history available perform better that agents that have only global history, even if the quantity of global and local information in the first case is the same as the quantity of global information in the second.
+
+After the initial results, a study and analysis of different network topologies has followed, justified by the intuition that different network structures have emerged in various ecosystems and all should be taken in consideration to find optimal solution.
+Simple vicinity structures have been studied, as completely fixed/isolated communities and sliding window communities, and the first have proven to be extremely efficient, while the second have proven to be the worst possible case.
+We have continued with more complex structures that reflect more closely the real world examples that can be optimized by implementing a minority game model.
+Scale free and small world networks have proven to be equally good, but not as good as artificial fixed patch communities.
+
+This process has led us to conclusion that fixed and isolated communities are to be preferred when they are easily modelled, and have proposed a different approach when simple patch vicinities are not an option.
+The definition of a hierarchical community is a hybrid approach based on peripheral attachment rule as used by scale free networks and two properties of small world networks: small average path length and high clustering.
+We propose an algorithm that divides the entire set of agents in a number of communities estimated to be optimal for the value of a given $\alpha$, construct each community as a scale free network and then use the rewiring mechanism of small world networks.
+
+The second half of Chapter \ref{chapter:algorithm} is dedicated to real world problems that could find a solution in minority game models, and have already been proposed by other authors.
+Our intention was to bring to attention some of these applications and how they could benefit further from our results.
+
+As future developments many doors open and here only a few are mentioned.
+Among most important is the testing of other topologies that have not been considered, and a more detailed study into certain aspects of the topologies described in this work.
+A more detailed estimates of certain parameters, especially for scale free and small world networks, is also another important issue.
+During this work possible explanations have been made for certain phenomenons but have not been studied profoundly.
+Probably the most important one to study could be the dynamics of competitive systems in the highly assymetrical phase that have been considered less in this work.
